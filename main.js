@@ -17,10 +17,11 @@ function startGame(mode) {
     var game = document.getElementById("game");
     let time = 60;
     let score = 0;
+    let wrongAnswer=0;
 
     game.style.display = "flex";
     greeting.style.display = "none";
-    document.getElementById("difficulty").innerHTML = mode+"X"+mode;
+    document.getElementById("difficulty").innerHTML = " "+mode+"X"+mode;
     generateBoard(mode);
 
     boxes.forEach(element => {
@@ -32,6 +33,8 @@ function startGame(mode) {
             }
             else {
                 element.style.opacity = 0;
+                score--;
+                scoreBoard.innerHTML = score;
             }
         });
     
