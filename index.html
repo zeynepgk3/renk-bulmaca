@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Color</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<body>
+    <div class="container">
+        <!--GREETING-->
+        <div class="row" id="greeting">
+            <h2>Welcome to Find Color Game</h2>
+            <p>You must choose the given color in 1 minute. Good Luck!</p>
+            <h2>Choose difficulty</h2>
+            <p>
+                <button id="easy" class="btn btn-outline-success" onclick="startGame(3)">3x3</button>
+                <button id="normal" class="btn btn-outline-primary" onclick="startGame(4)">4x4</button>
+                <button id="hard" class="btn btn-outline-danger" onclick="startGame(5)">5x5</button>
+            </p>
+        </div>
+
+        <!--BOARD-->
+        <div class="row" id="game" style="display: none;">
+            <div class="col-12 d-flex flex-wrap align-items-center justify-content-center">
+                <p></p>Difficulty: <h4 id="difficulty">0</h4>
+                </p>
+                <p>Find the color</p>
+                <p>
+                    <div id="mainColor">
+                        <!--contains random color to should be found by gamer-->
+                    </div>
+                </p>
+                <span>
+                    Time left: <span id="time">60</span>
+                </span>
+                <span id="scoreBoard">
+                    Score: <span id="score">0</span>
+                </span>
+
+            </div>
+            <div class="col-12" id="board" style="display: block;">
+                <!--contains color game board-->
+            </div>
+        </div>
+
+        <!--THE END-->
+        <div class="row" id="result" style="display: none;">
+            <h2>Score:<span id="lastScore"></span></h2>
+            <p><button onclick="tryAgain()" class="btn btn-dark">Try Again</button></p>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
