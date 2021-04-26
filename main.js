@@ -86,6 +86,7 @@ function generateBoard(count) {
     for (let i = 0; i < count; i++) {
         let row = document.createElement("div");
         row.className = "row";
+        row.classList.add("justify-content-center");
         for (let j = 1; j <= count; j++) {
             let box = document.createElement("div");
             box.className = "box";
